@@ -8,6 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+
 import com.joanzapata.iconify.IconFontDescriptor;
 import com.joanzapata.iconify.sample.utils.AndroidUtils;
 
@@ -20,9 +22,11 @@ public class FontIconsViewPagerAdapter extends PagerAdapter {
     }
 
     private final FontWithTitle[] fonts;
+    private final EditText mSearchEditTxt;
 
-    public FontIconsViewPagerAdapter(FontWithTitle[] fonts) {
+    public FontIconsViewPagerAdapter(FontWithTitle[] fonts, EditText searchEditTxt) {
         this.fonts = fonts;
+        mSearchEditTxt = searchEditTxt;
     }
 
     @Override
@@ -39,7 +43,7 @@ public class FontIconsViewPagerAdapter extends PagerAdapter {
         int nbColumns = AndroidUtils.getScreenSize((Activity) context).width /
                 context.getResources().getDimensionPixelSize(R.dimen.item_width);
         recyclerView.setLayoutManager(new GridLayoutManager(context, nbColumns));
-        recyclerView.setAdapter(new IconAdapter(fonts[position].getFont().characters()));
+        recyclerView.setAdapter(new IconAdapter(fonts[position].getFont().characters(),mSearchEditTxt));
         container.addView(view);
         return view;
     }
