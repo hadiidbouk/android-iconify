@@ -1,3 +1,6 @@
+
+# Adding Search bar
+
 <img src="graphics/logo.jpg" height="154" align="center">
 
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" width="121">](https://play.google.com/store/apps/details?id=com.joanzapata.android.icons.sample)
