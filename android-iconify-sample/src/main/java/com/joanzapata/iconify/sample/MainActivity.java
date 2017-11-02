@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
 		// Fill view pager
 		viewPager.setAdapter(new FontIconsViewPagerAdapter(Font.values(),mSearchEditText));
+		viewPager.setOffscreenPageLimit(10);
 		tabLayout.setupWithViewPager(viewPager);
 
 
