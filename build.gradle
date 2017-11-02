@@ -2,6 +2,7 @@ subprojects {
     buildscript {
         repositories {
             jcenter()
+            google()
         }
     }
 
@@ -11,8 +12,15 @@ subprojects {
 }
 
 ext {
-    androidPlugin = 'com.android.tools.build:gradle:2.3.3'
+    androidPlugin =   'com.android.tools.build:gradle:3.0.0'
+
     minSdkVersion = 4
     compileSdkVersion = 26
-    buildToolsVersion = '26.0.1'
+    buildToolsVersion = '26.0.2'
+}
+
+buildscript {
+    repositories {
+        google()
+    }
 }
