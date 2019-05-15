@@ -1,5 +1,5 @@
 
-# Adding Search bar to the simple
+# Adding Search bar
 
 <img src="graphics/logo.jpg" height="154" align="center">
 
